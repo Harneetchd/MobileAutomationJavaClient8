@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-04T15:13:15 EST" name="com.andr.tests.DemoAppTest" finished-at="2023-12-04T15:14:22 EST" duration-ms="67581">
+    <groups>
+    </groups>
+    <test started-at="2023-12-04T15:13:15 EST" name="Command line test" finished-at="2023-12-04T15:14:22 EST" duration-ms="67581">
+      <class name="com.andr.tests.DemoAppTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:15 EST" name="setUp" finished-at="2023-12-04T15:13:23 EST" duration-ms="8361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickGeoAllowOnce()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:23 EST" name="clickGeoAllowOnce" finished-at="2023-12-04T15:13:28 EST" duration-ms="4883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickGeoAllowOnce -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:28 EST" name="setUp" finished-at="2023-12-04T15:13:34 EST" duration-ms="5759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickLogin()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:34 EST" name="clickLogin" finished-at="2023-12-04T15:13:39 EST" duration-ms="5175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLogin -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:39 EST" name="setUp" finished-at="2023-12-04T15:13:45 EST" duration-ms="5699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickOnDrawing()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:45 EST" name="clickOnDrawing" finished-at="2023-12-04T15:13:47 EST" duration-ms="2427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnDrawing -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:47 EST" name="setUp" finished-at="2023-12-04T15:13:53 EST" duration-ms="5477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickOnQRCodeNoPermission()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:53 EST" name="clickOnQRCodeNoPermission" finished-at="2023-12-04T15:13:56 EST" duration-ms="3736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnQRCodeNoPermission -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:13:56 EST" name="setUp" finished-at="2023-12-04T15:14:02 EST" duration-ms="5597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickOnWebView()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:14:02 EST" name="clickOnWebView" finished-at="2023-12-04T15:14:13 EST" duration-ms="10810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnWebView -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:14:13 EST" name="setUp" finished-at="2023-12-04T15:14:18 EST" duration-ms="5432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickQRCodePermitOnce()[pri:0, instance:com.andr.tests.DemoAppTest@32cf48b7]" started-at="2023-12-04T15:14:18 EST" name="clickQRCodePermitOnce" finished-at="2023-12-04T15:14:22 EST" duration-ms="4124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickQRCodePermitOnce -->
+      </class> <!-- com.andr.tests.DemoAppTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.andr.tests.DemoAppTest -->
+</testng-results>
