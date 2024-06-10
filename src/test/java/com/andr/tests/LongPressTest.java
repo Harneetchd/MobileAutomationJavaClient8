@@ -25,11 +25,12 @@ public class LongPressTest extends Andr_BaseTest
 	}
 	
 	@Test
-	public void testLongPress()
+	public void testLongPress() throws InterruptedException
 	{
 		page.clickOnViews();
 		page.clickOnExpandable();
 		page.clickCustomAdapter();
+		Thread.sleep(1000);
 		page.clickDogNames();
 	}
 	

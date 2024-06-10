@@ -1,9 +1,16 @@
 package com.andr.pages;
 
+import java.time.Duration;
+
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.FindBy;
 
 import com.android.base.Andr_BasePage;
+import com.android.base.Andr_BaseTest;
+import com.google.common.collect.ImmutableList;
 
 import io.appium.java_client.AppiumDriver;
 
@@ -41,9 +48,11 @@ public class LongPressPage extends Andr_BasePage{
 		eleCustomAdapter.click();
 	}
 	
-	public void clickDogNames()
+	public void clickDogNames() throws InterruptedException
 	{
-		longPress(eleDogNames, driver);
+		eleDogNames.click();
+		
+		//longPress(eleDogNames,driver);
 	}
 
 }

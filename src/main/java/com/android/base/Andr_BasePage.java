@@ -12,12 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.google.common.collect.ImmutableList;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Andr_BasePage 
 {
-	 AppiumDriver driver;
+	 protected AppiumDriver driver;
 	
 	public Andr_BasePage(AppiumDriver driver)
 	{
@@ -25,7 +24,7 @@ public class Andr_BasePage
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	public void longPress(WebElement ele, AppiumDriver driver)
+	public static void longPress(WebElement ele, AppiumDriver driver)
 	{
 		//1. get location  of element using Point class
 		Point location = ele.getLocation();
@@ -36,7 +35,7 @@ public class Andr_BasePage
 		//3. create an object of Sequence class , passing the input and adding various method actions
 		Sequence sequence = new Sequence(input,0);
 		sequence.addAction(input.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), location.x,location.y));
-		sequence.addAction(input.createPointerMove(Duration.ofSeconds(5), PointerInput.Origin.viewport(),location.x , location.y));
+		sequence.addAction(input.createPointerMove(Duration.ofSeconds(2), PointerInput.Origin.viewport(),location.x , location.y));
 		sequence.addAction(input.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
 		sequence.addAction(input.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 		

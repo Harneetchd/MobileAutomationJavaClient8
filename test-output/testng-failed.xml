@@ -5,7 +5,9 @@
     <classes>
       <class name="com.andr.tests.DemoAppTest">
         <methods>
+          <include name="startAppiumServer"/>
           <include name="clickOnWebView"/>
+          <include name="tearDownServer"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.andr.tests.DemoAppTest -->
