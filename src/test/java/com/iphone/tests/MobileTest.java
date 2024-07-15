@@ -19,7 +19,9 @@ public class MobileTest extends IPhone_BaseTest
   @BeforeMethod
   public void beforeMethod() throws MalformedURLException
   {
-	  driver= launchIPhoneApp();
+	  //driver= launchIPhoneApp();
+	  driver=launchIPhoneApp_SauceLabs();
+	  //driver=launchIPhoneAppRealDevice_SauceLabs();
 	  page = new MobilePage(driver);
   }
 

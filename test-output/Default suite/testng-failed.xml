@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.andr.tests.DemoAppTest">
+      <class name="com.iphone.tests.MobileTest">
         <methods>
-          <include name="startAppiumServer"/>
-          <include name="clickOnWebView"/>
-          <include name="tearDownServer"/>
-          <include name="setUp"/>
+          <include name="clickAction"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.andr.tests.DemoAppTest -->
+      </class> <!-- com.iphone.tests.MobileTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

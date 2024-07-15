@@ -1,6 +1,7 @@
 package com.android.base;
 
 import java.time.Duration;
+import java.util.Collections;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
@@ -16,7 +17,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Andr_BasePage 
 {
-	 protected AppiumDriver driver;
+	 protected static AppiumDriver driver;
 	
 	public Andr_BasePage(AppiumDriver driver)
 	{
@@ -24,7 +25,7 @@ public class Andr_BasePage
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	public static void longPress(WebElement ele, AppiumDriver driver)
+	public static void longPress(WebElement ele)
 	{
 		//1. get location  of element using Point class
 		Point location = ele.getLocation();
@@ -33,7 +34,7 @@ public class Andr_BasePage
 		PointerInput input = new PointerInput(PointerInput.Kind.TOUCH,"finger");
 		
 		//3. create an object of Sequence class , passing the input and adding various method actions
-		Sequence sequence = new Sequence(input,0);
+		Sequence sequence = new Sequence(input,1);
 		sequence.addAction(input.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), location.x,location.y));
 		sequence.addAction(input.createPointerMove(Duration.ofSeconds(2), PointerInput.Origin.viewport(),location.x , location.y));
 		sequence.addAction(input.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
@@ -55,50 +56,9 @@ public class Andr_BasePage
 		swipe.addAction(input.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
 		swipe.addAction(input.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 		
-		driver.perform(ImmutableList.of(swipe));	
+		driver.perform(Collections.singletonList(swipe));	
 	}
 	
-	public static void scroll(String pageDirection, double scrollRatio, AppiumDriver driver )
-	{
-		Duration SCROLL_DUR= Duration.ofMillis(300);
-		if(scrollRatio<0 || scrollRatio>1)
-		{
-			throw new Error("Scroll Distance must be between 0 and 1");
-		}
-		
-		Dimension size = driver.manage().window().getSize();
-		System.out.println("ScreenSize :"+size);
-		System.out.println("");
-		
-		Point midPoint = new Point((int)(size.width*0.5) , (int)(size.height *0.5));
-		
-		int a= (int)(midPoint.x * scrollRatio);// scrollRatio =.5
-		int b= (int)(midPoint.y * scrollRatio);
-		
-		int bottom = midPoint.y+b;
-		int top = midPoint.y - b;
-		int left = midPoint.x-a;
-		int right = midPoint.x+a;
-		
-		if(pageDirection =="UP")
-		{
-			swipe(new Point(midPoint.x, top),new Point(midPoint.x, top),SCROLL_DUR,driver);
-		}else if(pageDirection =="DOWN")
-		{
-			swipe(new Point(midPoint.x, bottom),new Point(midPoint.x, bottom),SCROLL_DUR, driver);
-		}else if(pageDirection =="lEFT")
-		{
-			swipe(new Point(left,midPoint.y), new Point(right,midPoint.y),SCROLL_DUR, driver);
-		}else if(pageDirection=="RIGHT")
-		{
-			swipe(new Point(right,midPoint.y), new Point(left,midPoint.y),SCROLL_DUR, driver);
-		}	
-	}
-	
-	public void swipeMe()
-	{
-		
-	}
 	
 
 }
